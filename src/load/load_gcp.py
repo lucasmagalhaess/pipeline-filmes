@@ -14,7 +14,7 @@ MINIO_BUCKET = os.getenv("MINIO_BUCKET")
 GCP_PROJECT_ID = os.getenv("GCP_PROJECT_ID")
 GCP_BUCKET = os.getenv("GCP_BUCKET")
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/workspaces/pipeline-filmes/terraform/credentials.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/opt/airflow/credentials/credentials.json"
 
 def read_from_minio(filename):
     client = Minio(
